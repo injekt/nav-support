@@ -2,6 +2,7 @@
 
 * Introduction
 	* nav-support库对导航框架中nav API及message API等底层接口做了封装，提供了在常见场景下更加方便的导航接口，使用时无需关注底层事件机制及消息机制等细节。同时nav-support库提供了更多的调试诊断信息，帮助开发时更早地发现导航中错误使用接口带来的潜在问题。
+	* 适用场景：a页面跳转到b页面，a传递参数给b，触发b中某个函数，b返回a时，将处理的结果带回给a
 
 
 * Getting started
