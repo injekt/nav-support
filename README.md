@@ -181,4 +181,38 @@
 		 });
 		
 		```
-  
+	* dd.support.nav.recycle
+	* dd.support.nav.close
+	* dd.support.nav.getCurrentId
+	* dd.support.drawer.init
+	* dd.support.drawer.config
+	* dd.support.drawer.open
+		* 类似于dd.support.nav.go, 参数形如
+		
+		```
+		dd.support.drawer.open({
+			params: {}, //可选。传递给drawer的参数
+			handler: 'fn', //可选。触发drawer的函数名
+			onSuccess: function(res) {}, //可选。接收drawer回传结果的函数
+			onFail: function(err) {} //可选。
+		});
+		
+		```
+		
+	* dd.support.drawer.close
+	* dd.support.drawer.enable
+	* dd.support.drawer.disable
+	* dd.support.call
+		* 调用某个frame的函数，一般可用于drawer向主frame函数发起调用。参数形如
+		
+		```
+		
+		dd.support.call({
+			id: 'id1', //必须。目标frame的id
+			params: {}, //可选。传递给目标frame的参数
+			handler: 'fn', //可选。触发目标frame的函数名
+			onSuccess: function(res) {}, //可选。接收目标frame回传结果的函数
+			onFail: function(err) {} //可选。
+		});
+		
+		```
