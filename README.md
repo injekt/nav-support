@@ -53,6 +53,7 @@
 		
 		```
 		dd.support.nav.init({
+			id: 'myid', //当前frame的id
 			onError: function(err){
 				//必须。nav-support库全局错误处理器，参数err为错误对象
 			},
