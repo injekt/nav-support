@@ -21,6 +21,7 @@
 	<script type="text/javascript">
 	dd.ready(function() {
 		dd.support.nav.init({
+	    id: 'myid'
             onInvoke: function(data) {
                 alert('onInvoke: ' + JSON.stringify(data));
             },
@@ -53,7 +54,7 @@
 		
 		```
 		dd.support.nav.init({
-			id: 'myid', //当前frame的id
+			id: 'myid', //当前frame的id。某个frame通过init初始化的id，必须和该frame被preload时所设入的id一致
 			onError: function(err){
 				//必须。nav-support库全局错误处理器，参数err为错误对象
 			},
@@ -159,7 +160,7 @@
 		 	data.x += 1;
 		 	data.y = 'def;
 		 	data.z.attr = 'value';
-		 	callback(data);
+		 	callback(data); //页面返回前必须调用callback
 		 }
 		
 		```
