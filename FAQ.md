@@ -36,6 +36,7 @@ dd.support.logger.level = dd.support.logger.LEVEL.INFO;
 
 ##### 错误提示：'thie frame is not initialized with a frame id'
 * 当前frame没有通过dd.support.nav.init正确初始化。初始化传入的参数必须带有id字段，指示当前frame的id。
+* 使用nav-support库的应用，希望接收消息的页面都必须通过dd.support.nav.init做初始化。
 * 当A使用preload预加载B时，需要传入id作为目标frame，即B的frame id；当A直接通过go调用跳转到B，也需要传入id作为B的frame id。这两种情况下，传入的id都需要和B自身通过dd.support.nav.init初始化自己时传入的id一致，否则可能导致B的消息无法接收。
 
 ##### 错误提示：'dd.support is already defined'
