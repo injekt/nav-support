@@ -9,6 +9,7 @@
 	* 引用最新版本的dingtalk.js（dingtalk.js地址请查阅开放平台文档）
 	* 引用lib/support.js
 	* 对support.js中api的使用，需要在dd.ready()回调触发之后，否则可能调用无效
+	* 须在dd.config传入的参数jsApiList中加上 ui.nav.preload, ui.nav.go, biz.util.openLink
 	* 使用nav-support库时请不要同时使用message API（runtime.message.post及runtime.message.fetch），否则在边际情况下可能造成消息丢失。
 	
 	```
@@ -19,6 +20,14 @@
     <script type="text/javascript" src="http://g.alicdn.com/ilw/ding/0.6.6/scripts/dingtalk.js"></script>
 	<script type="text/javascript" src="lib/javascripts/support.js"></script>
 	<script type="text/javascript">
+	dd.config({
+	    agentId: _config.agentId,
+            corpId: _config.corpId,
+            timeStamp: _config.timeStamp,
+            nonceStr: _config.nonceStr,
+            signature: _config.signature,
+            jsApiList: ['ui.nav.preload','ui.nav.go', 'biz.util.openLink']
+	});
 	dd.ready(function() {
 		dd.support.nav.init({
 	    id: 'myid'
