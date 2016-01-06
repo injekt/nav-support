@@ -59,6 +59,7 @@
 		* 可以通过重写dd.support.logger.w，覆盖logger输出错误信息的行为
 	* dd.support.nav.init
 		* 初始化nav-support库，每个使用support库的页面都需要在最开始处调用此方法。
+		* 首页id必须初始化为home_page
 		* 参数形式为
 		
 		```
