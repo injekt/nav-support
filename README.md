@@ -29,15 +29,15 @@
             jsApiList: ['ui.nav.preload','ui.nav.go', 'biz.util.openLink']
 	});
 	dd.ready(function() {
-		dd.support.nav.init({
-	    id: 'myid'
-            onInvoke: function(data) {
-                alert('onInvoke: ' + JSON.stringify(data));
-            },
-            onError: function(err) {
-                alert('onError: ' + JSON.stringify(err));
-            }
-        });
+	    dd.support.nav.init({
+	        id: 'myid' //首页id必须初始化为home_page
+                onInvoke: function(data) {
+                    alert('onInvoke: ' + JSON.stringify(data));
+                },
+                onError: function(err) {
+                    alert('onError: ' + JSON.stringify(err));
+                }
+            });
 	});
     </script>
 </head>
